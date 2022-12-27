@@ -17,17 +17,7 @@
     margin: 0;
 }
 
-.gridGen16 {
-    border-style: solid;
-    border-width: thin;
-}
-
-.gridGen32 {
-    border-style: solid;
-    border-width: thin;
-}
-
-.gridGen64 {
+.gridGen {
     border-style: solid;
     border-width: thin;
 }
