@@ -9,15 +9,25 @@
 }
 
 .grid {
-    height: 544px;
-    width: 544px;
-    display: flex;
-    flex-wrap: wrap;
+    height: 768px;
+    width: 768px;
+    display: grid;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
-.gridGen {
-    height: 2rem;
-    width: 2rem;
+.gridGen16 {
+    border-style: solid;
+    border-width: thin;
+}
+
+.gridGen32 {
+    border-style: solid;
+    border-width: thin;
+}
+
+.gridGen64 {
     border-style: solid;
     border-width: thin;
 }
