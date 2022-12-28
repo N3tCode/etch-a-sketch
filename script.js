@@ -52,19 +52,19 @@ const button16 = document.querySelector('#but16');
 
 button16.addEventListener('click', () => {
     gridGenerator.setAttribute('style', 'grid-template-columns: repeat(16, 1fr);'); 
-    gridGen(256, 16);
+    gridGen(256);
 })
 
 const button32 = document.querySelector('#but32');
 
 button32.addEventListener('click', () => {
     gridGenerator.setAttribute('style', 'grid-template-columns: repeat(32, 1fr);'); 
-    gridGen(1024, 32);
+    gridGen(1024);
 })
 
 const button64 = document.querySelector('#but64');
 
 button64.addEventListener('click', () => {
     gridGenerator.setAttribute('style', 'grid-template-columns: repeat(64, 1fr);'); 
-    gridGen(4096, 64);
+    gridGen(4096);
 })
