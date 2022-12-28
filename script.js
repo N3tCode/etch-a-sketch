@@ -13,7 +13,8 @@ function chooseColor(e) {
     if(color == defaultColor) {
         return e.target.style.backgroundColor = 'black';
     } else if (color == 'rainbow') {
-        return e.target.style.backgroundColor = 'red';
+        let randomColor = Math.floor(Math.random()*16777215).toString(16);
+        return e.target.style.backgroundColor = '#' + randomColor;
     }
 }
 

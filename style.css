@@ -4,8 +4,8 @@
     align-items: center;
 }
 
-.header {
-
+.menu-button {
+    padding: 0 .5rem;
 }
 
 .grid {
@@ -17,10 +17,6 @@
     margin: 0;
     border-style: solid;
     border-width: thin;
-}
-
-.gridGen {
-
 }
 
 #gridHover:hover {
