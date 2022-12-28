@@ -1,22 +1,51 @@
-const gridGenerator = document.querySelector('.grid');
-const remove = document.querySelector('.gridGen')
+// grid
 
-function gridGen(divs, size) {
+const gridGenerator = document.querySelector('.grid');
+const gridGenerated = document.querySelector('.gridGen');
+
+const defaultGridSize = 256;
+const defaultColor = 'black';
+
+let gridSize = defaultGridSize;
+let color = defaultColor;
+
+function chooseColor(e) {
+    if(color == defaultColor) {
+        return e.target.style.backgroundColor = 'black';
+    } else if (color == 'rainbow') {
+        return e.target.style.backgroundColor = 'red';
+    }
+}
+
+gridGenerator.setAttribute('style', 'grid-template-columns: repeat(16, 1fr);'); 
+gridGen(gridSize);
+
+function gridGen(gridSize) {
     while(gridGenerator.hasChildNodes()) {
         gridGenerator.removeChild(gridGenerator.firstChild);
       }
-    for(let i = 0; i < divs; i++) {
+    for(let i = 0; i < gridSize; i++) {
         let createDiv = document.createElement('div');
-        createDiv.classList.add('gridGen' + size);
-        createDiv.addEventListener('mouseenter', (e) => {
-            createDiv.setAttribute('id', 'gridHover');
-        })
-        createDiv.addEventListener('mouseleave', (e) => {
-            createDiv.style.backgroundColor = 'black';
-        })
+        createDiv.classList.add('gridGen');
+        createDiv.addEventListener('mouseenter', chooseColor);
+        createDiv.addEventListener('mouseleave', chooseColor);
         gridGenerator.appendChild(createDiv);
     }
 }
+
+// buttons
+
+const buttonRainbow = document.querySelector('#butRainbow');
+
+buttonRainbow.addEventListener('click', () => {
+    return color = 'rainbow';
+});
+
+const buttonBlack = document.querySelector('#butBlack');
+
+buttonBlack.addEventListener('click', () => {
+    return color = defaultColor;
+});
 
 const button16 = document.querySelector('#but16');
 
